@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PG STORE — минимализм / корзина</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pgstore.css"> 
+    
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">PG<span>STORE</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#products">Продукты</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><div class="cart-icon" id="cartIcon">🛒 <span class="cart-count" id="cartCount">0</span></div></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>PG<br><span>STORE</span></h1>
+            <p>Обувь <em>одежда и аксессуары</em></p>
+            <div class="btn-group">
+                <a href="#products" class="btn-primary">Каталог →</a>
+                <a href="#contact" class="btn-outline">Контакты</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">— <span>ХИТЫ ПРОДАЖ</span> —</h2>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="form-section">
+        <div class="form-container">
+            <h2>Есть <span>вопросы?</span></h2>
+            <p>Оставь заявку — ответим в течение 10 минут.</p>
+            <form id="ddxForm">
+                <div class="form-grid">
+                    <input type="text" name="name" placeholder="Ваше имя *" required>
+                    <input type="email" name="email" placeholder="Email *" required>
+                    <input type="tel" name="phone" placeholder="Телефон">
+                    <input type="text" name="subject" placeholder="Тема вопроса">
+                    <textarea rows="3" name="message" placeholder="Ваше сообщение..."></textarea>
+                    <button type="submit" class="form-btn">Отправить заявку →</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container"><p>© 2026 <strong>PG STORE</strong> — Все права защищены.</p></div>
+</footer>
+
+<!-- Боковая корзина -->
+<div class="overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+        <h3>КОРЗИНА</h3>
+        <button class="close-drawer" id="closeDrawerBtn">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItemsContainer">
+        <p style="text-align:center; padding: 20px;">Корзина пуста</p>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total" id="cartTotalDrawer">Итого: 0 ₽</div>
+        <button id="clearCartDrawerBtn" class="clear-cart">Очистить корзину</button>
+    </div>
+</div>
+<div class="product-card">
+    <div class="product-img">...</div>
+    <div class="product-info">
+        <div class="product-category">...</div>
+        <h3>...</h3>
+        <div class="price">...</div>
+        <button class="btn-card">В корзину →</button>
+    </div>
+</div>
+<div id="toastMessage" class="toast-msg">Товар добавлен</div>
+<body>
+<script src="js.js"></script>
+</body>
+</html>
